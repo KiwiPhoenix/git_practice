@@ -1,11 +1,10 @@
 require 'colorize'
+require 'get'
 
-def puts_git(cmd)
-    puts `git #{cmd} -h`
-    menu
-end
+class MAIN
+  include Git 
 
-def menu
+  def menu
   puts "1 Enter git command".colorize(:cyan)
   puts "2 Exit".colorize(:red)
   choice = gets.to_i
@@ -21,5 +20,6 @@ def menu
     menu
   end
 end
+end
 
-menu
+Main.menu
