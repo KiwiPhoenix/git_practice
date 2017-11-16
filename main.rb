@@ -4,7 +4,7 @@ require 'get'
 class MAIN
   include Git 
 
-  def menu
+  def self.menu
   puts "1 Enter git command".colorize(:cyan)
   puts "2 Exit".colorize(:red)
   choice = gets.to_i
